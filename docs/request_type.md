@@ -1,0 +1,32 @@
+# Request types:
+
+- ### GET:
+    - Used to retrive data from server
+    - Sent when URL is submitted in the browser location bar or a user clicks a link
+    - Send data in the URL and query string
+    - Reloadable
+    - Can bookmark
+    - Used for read-only operations
+        - View, search, sort, or filter data
+        - Data does not change
+- ### POST:
+    - Used to send new data to server
+    - Sent when web form is submitted
+    - Send data in the URL and as an attachment
+    - Semi-reloadable (prompt to send data again)
+    - Can not bookmark
+    - Used for write operations
+        - Create data
+        - Data does change
+- ### PUT:
+    - Used to update data to server
+    - Sent when update web form is submitted
+    - Send data in the URL and as an attachment
+    - Semi-reloadable (prompt to send data again)
+    - Can not bookmark
+    - Used for write operations
+        - Update data
+        - Data does change
+- ### DELETE:
+    - Used to delete data from server
+    - Can not bookmark
