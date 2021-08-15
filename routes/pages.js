@@ -3,12 +3,16 @@ const router = express.Router();
 
 
 router.get('/', (req , res) => {
-    res.send("Home page")
+    res.render('../views/pages/index', {
+        pageTitle : "home page"
+    });
 });
 
 
 router.get('/users', (req , res) => {
-    res.send("Users page")
+    res.render('../views/pages/index', {
+        pageTitle : "Users"
+    });
 });
 
 module.exports = router;
