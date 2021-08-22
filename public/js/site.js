@@ -1,3 +1,8 @@
 window.onload = () => {
-    alert(pageTitle);
+    setTimeout(() => {
+        fetch('/api/editUser').then((data) => {
+            console.log(data);
+        })
+    },2000)
+    
 }

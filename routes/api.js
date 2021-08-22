@@ -2,6 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const usersController = require('../controllers/users');
+const db = require('../helpers/db');
 
 router.get('/', (req, res) => {
     res.send({
@@ -46,5 +47,21 @@ router.get('/user/:name/:age', (req, res) => {
         status : "success"
     })
 });
+
+router.post('/getUsers/', (req, res) => {
+    let usersList = db.getUsers();
+    res.send(usersList);
+});
+
+router.get('/getPartners/', (req, res) => {
+    let partnersList = db.getAllPartners();
+    res.send(partnersList);
+});
+
+router.get('/editUser/', (req,res) => {
+    let editUser = db.editUser();
+    res.send(editUser)
+})
+
 
 module.exports = router;

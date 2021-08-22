@@ -3,7 +3,6 @@ const port = (process.env.PORT) ? process.env.PORT : 3000;
 const router = require('./routes/index');
 const app = express();
 
-
 app.set('view engine', 'ejs');
 // access the public folder as root
 app.use(express.static('public'));
@@ -19,5 +18,3 @@ app.use('/', router);
 app.listen(port, ()=>{
     console.log(`Server is running at ${port}`);
 });
-
-
