@@ -8,6 +8,10 @@
 </head>
 <body>
     <h1><%- pageTitle %></h1>
-    
+    <% if (typeof users !== 'undefined') { %>
+       <script>
+           const usersData = <%- users %>;
+       </script>
+    <% } %>
 </body>
 </html>

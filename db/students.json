@@ -1,43 +1,10 @@
 [
-    {
-        "id": 1,
-        "name": "idan",
-        "last": "abergel"
-    },
-    {
-        "id": 2,
-        "name": "khalil",
-        "last": "altif"
-    },
-    {
-        "id": 3,
-        "name": "michael",
-        "last": "Gumenko"
-    },
-    {
-        "id": 4,
-        "name": "daniel",
-        "last": "zangi"
-    },
-    {
-        "id": 5,
-        "name": "geva",
-        "last": "jacobovi"
-    },
-    {
-        "id": 6,
-        "name": "lea",
-        "last": "sol"
-    },
-    {
-        "id": 7,
-        "name": "maria",
-        "last": "slavov"
-    },
-    {
-        "id": 8,
-        "name": "achia",
-        "last": "kellerma"
-    }
-
+  { "id": 1, "name": "idan", "last": "abergel" },
+  { "id": 2, "name": "khalil", "last": "altif" },
+  { "id": 3, "name": "michael", "last": "Gumenko" },
+  { "id": 4, "name": "daniel", "last": "zangi" },
+  { "id": 5, "name": "geva", "last": "jacobovi" },
+  { "id": 6, "name": "lea", "last": "sol" },
+  { "id": 7, "name": "maria", "last": "slavov" },
+  { "id": 8, "name": "achia", "last": "kellerma" }
 ]

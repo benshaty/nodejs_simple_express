@@ -1,8 +1,7 @@
 window.onload = () => {
     setTimeout(() => {
-        fetch('/api/editUser').then((data) => {
-            console.log(data);
-        })
+        fetch('/api/getPartners').then(res => res.json()).then(res=> console.log(res));
+        fetch('/api/getUsers').then(res => res.json()).then(res=> console.log(res));
     },2000)
     
 }

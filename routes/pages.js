@@ -1,5 +1,7 @@
+const { json } = require('express');
 const express = require('express');
 const router = express.Router();
+const db = require('../helpers/db');
 
 
 router.get('/', (req , res) => {
@@ -10,9 +12,12 @@ router.get('/', (req , res) => {
 
 
 router.get('/users', (req , res) => {
+    let users = db.getUsers();
     res.render('../views/pages/index', {
-        pageTitle : "Users"
+        pageTitle : "Users",
+        users: JSON.stringify(users)
     });
 });
+
 
 module.exports = router;

@@ -48,7 +48,7 @@ router.get('/user/:name/:age', (req, res) => {
     })
 });
 
-router.post('/getUsers/', (req, res) => {
+router.get('/getUsers/', (req, res) => {
     let usersList = db.getUsers();
     res.send(usersList);
 });
@@ -58,10 +58,38 @@ router.get('/getPartners/', (req, res) => {
     res.send(partnersList);
 });
 
-router.get('/editUser/', (req,res) => {
-    let editUser = db.editUser();
-    res.send(editUser)
-})
+
+router.post('/editUsername/', (req, res) => {   
+    if (req.body.last && req.body.newLast && req.body.name && req.body.newName) {
+        let resultName = db.editUserName(req.body.name,req.body.newName); 
+        let resultLast = db.editUserLast(req.body.last,req.body.newLast);
+        if (resultName.flag && resultLast.flag){
+            db.updateDb('users');
+            res.send({'msg': 'Users DB Updated'});
+        }
+        else 
+            res.send({'msg':resultLast.msg})
+    }
+    else if (req.body.last && req.body.newLast) {
+        let result = db.editUserLast(req.body.last,req.body.newLast)   
+        if (result.flag){
+            db.updateDb('users');
+            res.send({'msg': 'Users DB Updated'});
+        }else {res.send({'msg': result.msg})}
+    }
+    else if (req.body.name && req.body.newName) {
+        let result = db.editUserName(req.body.name,req.body.newName)   ;
+        console.log(result);
+        if (result.flag){
+            db.updateDb('users');
+            res.send({'msg': 'Users DB Updated'});
+        }else {res.send({'msg': result.msg})}
+
+    }
+    else {res.send({'msg': 'error'})}
+    });
+
+
 
 
 module.exports = router;
