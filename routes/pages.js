@@ -19,5 +19,13 @@ router.get('/users', (req , res) => {
     });
 });
 
+router.get('/partners', (req , res) => {
+    let partners = db.getAllPartners();
+    res.render('../views/pages/index', {
+        pageTitle : "Partners",
+        partners: JSON.stringify(partners)
+    });
+});
+
 
 module.exports = router;
